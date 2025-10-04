@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="../images/readme_images/SHG-banner.png" alt="SHG-banner" >
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/SHG-banner.png" alt="SHG-banner" >
 </p>
 
 
@@ -107,7 +107,7 @@
                             
 
 # 1. About this Repository
-This GitHub repository offers comprehensive guidance, from basic to advanced levels, for computationally addressing thermal effects in Second Harmonic Generation (SHG). As an educational resource, this repository starts with covering fundamental aspects of Fortran, including how to install it and master its essential commands. Also, we demonstrate techniques for computationally solving a nonlinear optics phenomenon using the Finite Difference Method (FDM), provide access to the codes utilized in our studies, and explain our research findings clearly. Also, we outline potential research opportunities for future exploration. Our ongoing efforts involve expanding the repository to incorporate further advancements in the field. 
+This GitHub repository ([**SHG-Documentation**](https://github.com/Second-Harmonic-Generation/SHG-Documentation)) offers comprehensive guidance, from basic to advanced levels, for computationally addressing thermal effects in Second Harmonic Generation (SHG). As an educational resource, this repository starts with covering fundamental aspects of Fortran, including how to install it and master its essential commands. Also, we demonstrate techniques for computationally solving a nonlinear optics phenomenon using the Finite Difference Method (FDM), provide access to the codes utilized in our studies, and explain our research findings clearly. Also, we outline potential research opportunities for future exploration. Our ongoing efforts involve expanding the repository to incorporate further advancements in the field. 
 
 ## 1.1. Who Is This Tutorial For?   
 This tutorial is designed for anyone interested in computational physics, nonlinear optics, or scientific computing, regardless of their prior experience. Whether you're a student, researcher, or professional, this resource will guide you through the process of solving Thermal Effects in SHG using FDM.
@@ -123,11 +123,11 @@ By the end of this tutorial, you will:
 ## 1.3. Prerequisites  
 This tutorial is designed for three types of researcher:
 
-1. **For those who are familiar with SHG and Fortran**: You can dive straight into the research phase. The codes and topics provided in this repository, in [**src**](./src), are meant to deepen your knowledge and assist in further studies.
+1. **For those who are familiar with SHG and Fortran**: You can dive straight into the research phase. The codes and topics provided in this repository, in [**src**](https://github.com/Second-Harmonic-Generation/SHG-Documentation/tree/main/src), are meant to deepen your knowledge and assist in further studies.
 
 2. **For those who know Fortran but are new to SHG**: This tutorial will introduce you to the fundamentals of SHG, guiding you step-by-step through the key concepts. By the end, you'll be ready to tackle complex problems in this field.
 
-3. **For beginners with no prior knowledge of SHG or Fortran**: This repository is built with you in mind. We'll start with the basics, teaching you Fortran from the ground up in [**fortran_tutorial**](./fortran_tutorial), followed by an introduction to SHG. Our goal is to help you progress from understanding the basics to solving advanced physics and engineering problems.
+3. **For beginners with no prior knowledge of SHG or Fortran**: This repository is built with you in mind. We'll start with the basics, teaching you Fortran from the ground up in [**fortran_tutorial**](https://github.com/Second-Harmonic-Generation/SHG-Documentation/tree/main/fortran_tutorial), followed by an introduction to SHG. Our goal is to help you progress from understanding the basics to solving advanced physics and engineering problems.
 
 
 ## 1.4. Contents of this Repository 
@@ -177,7 +177,7 @@ Folder PATH listing
 SHG employs a nonlinear crystal like Potassium Titanyl Phosphate (KTP) to convert red laser (1064 nm) into green laser (532 nm). This conversion is essential because of green light's necessity and difficulty in direct production. During the SHG process, a powerful laser beam interacts with the crystal, causing it to emit light at exactly half the wavelength of the incoming beam, effectively doubling the light's frequency. 
 
 <p align="center">
-  <img src="../images/readme_images/image01.png" alt="Image 1">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image01.png" alt="Image 1">
 </p>
 
 <p align="center"> <strong>Figure 1.</strong> During SHG, a nonlinear crystal like KTP converts a 1064 nm red laser (Fundamental Wave) into 532 nm green laser (Second Harmonic Wave), effectively doubling the frequency of the original beam through a nonlinear optical process.</p>
@@ -188,7 +188,7 @@ As the SHG process occurs, some of the input energy is not perfectly converted i
 To address this issue, the crystal is equipped with a cooling system depicted in the Figure 2. A coolant circulates around the crystal, absorbing the heat thereby maintaining an optimal temperature for a more efficient SHG. The crystal's lateral surface is maintained at a constant temperature through cooling. Typically, a double layer of copper covers these surfaces, with either water or liquid nitrogen passing through it. This ensures a constant temperature condition at the crystal's side surface. Additionally, the input and output surfaces of the crystal are cooled through both radiation and convection. Heat reaches these surfaces through conduction and is then transferred away by convection and radiation processes.
 
 <p align="center">
-  <img src="../images/readme_images/image02.png" alt="Image 2" >
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image02.png" alt="Image 2" >
 </p>
 
 <p align="center"> <strong>Figure 2.</strong> A cooling system uses a double layer of copper and circulating coolant (water or liquid nitrogen) to manage heat dissipation, keeping the crystal at an optimal temperature for efficient laser performance during SHG.</p>
@@ -199,7 +199,7 @@ The thermal gradient within a crystal subjected to laser radiation is shown in F
 
 
 <p align="center">
-  <img src="../images/readme_images/image03.png" alt="Image 3">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image03.png" alt="Image 3">
 </p>
 
 <p align="center"> <strong>Figure 3.</strong> Visualization of the thermal gradient in a crystal exposed to laser radiation. The hottest point is at the center where the laser is focused, with temperature decreasing outward toward the edges. The left side, where the laser first hits, is the hottest, with the temperature gradually cooling as it moves to the right.</p>
@@ -222,7 +222,7 @@ To achieve optimal performance, understanding the heat conduction within a cryst
 To efficiently analyze Second Harmonic Generation (SHG) in a KTP crystal modeled as a cylinder, we can reduce the workload by taking advantage of the crystal’s symmetry. Instead of examining the entire cylindrical shape, we focus on a simpler two-dimensional half-plane, a rectangular section that represents one side of the cylinder. This works because of the crystal’s symmetry along its lateral axis; studying this smaller section captures the behavior of the full cylinder. By visualizing this half-plane rotating around the horizontal axis, we effectively account for the whole cylindrical structure. This approach significantly reduces the size of the problem, decreasing the number of calculations needed. It allows for high-resolution analysis with greater efficiency, maintaining the accuracy of the SHG study while saving substantial time and resources.
 
 <p align="center">
-  <img src="../images/readme_images/image04.png" alt="Image 4" width="45%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image04.png" alt="Image 4" width="45%">
 </p>
 
 <p align="center"> <strong>Figure 4.</strong> Efficient SHG Analysis in KTP Crystals Using Symmetry: The image shows how a two-dimensional half-plane leverages the crystal’s symmetry to represent the entire cylinder, reducing computational complexity while maintaining accurate SHG analysis. 
@@ -233,7 +233,7 @@ To efficiently analyze Second Harmonic Generation (SHG) in a KTP crystal modeled
 In the KTP crystal, the input and output faces undergo convective and radiative cooling, allowing heat to dissipate efficiently from these surfaces. Since the lateral surfaces are in contact with a cooling system, only conductive heat transfer occurs at these boundaries, maintaining a constant temperature. As a result, there are no mathematical complexities associated with lateral surface boundary conditions. Heat transfer within crystal occurs exclusively through conduction, since it is a solid. Additionally, we need to carefully determine the boundary conditions of the crystal's axis for accurate modeling.
 
 <p align="center">
-  <img src="../images/readme_images/image05.png" alt="Image 5" width="85%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image05.png" alt="Image 5" width="85%">
 </p>
 
 <p align="center"> <strong>Figure 5.</strong> Heat dissipation in KTP crystal during SHG, with convective and radiative cooling at the faces and constant temperature maintained at the lateral surfaces.
@@ -242,7 +242,7 @@ In the KTP crystal, the input and output faces undergo convective and radiative 
 Just as a ball rolls downhill due to the force of gravity, heat flows from a hotter region to a colder one due to the temperature gradient. The temperature difference drives this heat transfer, similar to how gravity drives the motion of the ball (Figure 6).
 
 <p align="center">
-  <img src="../images/readme_images/image06.png" alt="Image 6" width="75%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image06.png" alt="Image 6" width="75%">
 </p>
 
 <p align="center"> <strong>Figure 6.</strong> Just like a ball that only rolls downhill and not uphill due to gravity, heat flows from the hottest regions to the cooler ones, illustrating the natural direction of heat transfer within the crystal.
@@ -251,7 +251,7 @@ Just as a ball rolls downhill due to the force of gravity, heat flows from a hot
 The crystal axis represents the hottest region, and no heat flows across it, meaning there is no conduction, convection, or radiation in this direction. Due to the temperature gradient, heat is transferred solely outward from the axis toward the cooler lateral surfaces.
 
 <p align="center">
-  <img src="../images/readme_images/image07.png" alt="Image 7" width="30%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image07.png" alt="Image 7" width="30%">
 </p>
 
 <p align="center"> <strong>Figure 7.</strong> Heat only flows radially outward from the hottest crystal axis to the cooler lateral surfaces, with no heat transfer across the axis.
@@ -261,7 +261,7 @@ The crystal axis represents the hottest region, and no heat flows across it, mea
 In conclusion, the boundary condition for the crystal axis is insulation, as no heat transfer occurs across it. With this, all boundary conditions for the crystal are defined: insulation for the axis, constant temperature at the lateral surfaces, and convection and radiation at the faces. These boundary conditions are essential for accurately modeling the heat distribution and optimizing SHG performance.
 
 <p align="center">
-  <img src="../images/readme_images/image08.png" alt="Image 8" width="85%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image08.png" alt="Image 8" width="85%">
 </p>
 
 <p align="center"> <strong>Figure 8.</strong> 
@@ -291,13 +291,13 @@ In our next three publications, we investigate different configurations of key p
 Each study builds on the last, incorporating increasingly realistic factors to improve model accuracy. This progression brings the models closer to real-world, enhancing our ability to predict heat transfer dynamics in nonlinear optics.
 
 
-- **Heat Equation _ Continuous Wave Gaussian _ Analytical** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-47-13-2317), [(Article)](./citation/1_Heat-Equation_Continuous-Wave_Gaussian_Analytical.pdf)  
+- **Heat Equation _ Continuous Wave Gaussian _ Analytical** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-47-13-2317), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/1_Heat-Equation_Continuous-Wave_Gaussian_Analytical.pdf)  
 This work focuses on predicting temperature distributions in laser crystals using a Continuous Wave Gaussian source. The analytical model provided insights into the basic thermal behavior in solid-state lasers, a critical step toward designing more efficient systems by accurately modeling heat within complex crystal structures.
 
-- **Heat Equation _ Continuous Wave Gaussian** [(Journal)](https://link.springer.com/article/10.1007/s13538-014-0291-x), [(Article)](./citation/2_Heat-Equation_Continuous-Wave_Gaussian.pdf), [(Code)](./src/2_Heat-Equation_Continuous-Wave_Gaussian.f90)   
+- **Heat Equation _ Continuous Wave Gaussian** [(Journal)](https://link.springer.com/article/10.1007/s13538-014-0291-x), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/2_Heat-Equation_Continuous-Wave_Gaussian.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/2_Heat-Equation_Continuous-Wave_Gaussian.f90)   
 Building upon the analytical work, this computational study incorporated more realistic factors, such as temperature-dependent thermal conductivity and radiation effects. The model demonstrated the significant impact of these often-overlooked factors on heat distribution in KTP crystals, enhancing the thermal modeling of laser systems.
 
-- **Heat Equation _ Pulsed Wave Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-54-6-1241), [(Article)](./citation/3_Heat-Equation_Pulsed-Wave_Gaussian.pdf), [(Code)](./src/3_Heat-Equation_Pulsed-Wave_Gaussian.f90)       
+- **Heat Equation _ Pulsed Wave Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-54-6-1241), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/3_Heat-Equation_Pulsed-Wave_Gaussian.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/3_Heat-Equation_Pulsed-Wave_Gaussian.f90)       
 This study developed a numerical model for heat distribution under Pulsed Gaussian conditions, highlighting the critical role of variable thermal conductivity, especially when radiation effects are minimal. The findings improved the accuracy of predicting heat behavior in pulsed laser systems, contributing to more effective thermal management strategies.
 
 
@@ -305,7 +305,7 @@ This study developed a numerical model for heat distribution under Pulsed Gaussi
 During SHG, a crystal is subjected to laser radiation, the temperature at various points within the crystal becomes spatially and temporally dependent. This variation in temperature causes corresponding changes in the crystal's refractive index, making the refractive index also a function of position and time. Since the speed of light in a medium is dependent on its refractive index, the speed of light traveling through different regions of the crystal will similarly be a function of position and time. Specifically, the temperature gradient within the crystal causes the speed of light to vary radially. Consequently, different regions of the wavefront experience different speeds, leading to distortions in the wavefront shape. This results in a phase mismatch between the fundamental and second harmonic waves. In different crystals, the wavefronts may be convex or concave. Figure 9. shows a concave wavefront.
 
 <p align="center">
-  <img src="../images/readme_images/image09.png" alt="Image 9" width="75%">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image09.png" alt="Image 9" width="75%">
 </p>
 
 <p align="center"> <strong>Figure 9.</strong> Schematic of the phase mismatch due to temprature gradient within the crystal. In different crystals the wavefronts may be convex or concave. This figure shows a concave wavefront.</p>
@@ -338,14 +338,14 @@ Note: The equations, represented in different colors for $\textcolor{orange}{T}$
 
 By solving the heat equation, we obtain the temperature-dependent phase mismatch $(\Delta \varphi)$  across the crystal. This relationship enables us to predict the phase mismatch spatially and temporally, which is crucial for optimizing nonlinear optical processes such as Second Harmonic Generation (SHG). Our contributions in this area are detailed in the following publication:
 
-- **Phase Mismatch _ Pulsed Wave Gaussian** [(Journal)](https://www.researchgate.net/publication/267926440_Thermally_induced_phase_mismatching_in_a_repetitively_Gaussian_pulsed_pumping_KTP_crystal_A_spatiotemporal_treatment), [(Article)](./citation/4_Phase-Mismatch_Pulsed-Wave_Gaussia.pdf), [(Code)](./src/4_Phase-Mismatch_Pulsed-Wave_Gaussian.f90)     
+- **Phase Mismatch _ Pulsed Wave Gaussian** [(Journal)](https://www.researchgate.net/publication/267926440_Thermally_induced_phase_mismatching_in_a_repetitively_Gaussian_pulsed_pumping_KTP_crystal_A_spatiotemporal_treatment), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/4_Phase-Mismatch_Pulsed-Wave_Gaussia.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/4_Phase-Mismatch_Pulsed-Wave_Gaussian.f90)     
 This work addresses the issue of Thermally Induced Phase Mismatching (TIPM) in KTP crystals under Pulsed Wave Gaussian conditions. The study developed a spatiotemporal model to examine how temperature rise influences nonlinear conversion efficiency, highlighting the critical need to manage TIPM to optimize SHG performance in pulsed laser applications. The findings emphasize the importance of precise thermal management strategies to reduce phase mismatches and improve overall system efficiency.
 
 # 8. Electromagnetic Field
 In ideal conditions where there is no heat dissipation or phase mismatch, all of the fundamental wave is perfectly converted into the Second Harmonic Wave, demonstrating the maximum possible efficiency in nonlinear crystals. 
 
 <p align="center">
-  <img src="../images/readme_images/image01.png" alt="Image 1">
+  <img src="https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/images/readme_images/image01.png" alt="Image 1">
 </p>
 
 <p align="center"> <strong>Figure 1.</strong> Maximum SHG Efficiency: Achieving full conversion of the Fundamental Wave (FW) to the Second Harmonic Wave (SHW) under ideal thermal and phase conditions.
@@ -385,10 +385,10 @@ Note: The equations, represented in different colors for $\textcolor{purple}{\De
 
 We used different wave sources in each article: one uses a Continuous Wave Gaussian source, while the other employs a Pulsed Wave Bessel-Gaussian source. These variations in wave sources provide further insight into how different beam profiles affect the system's behavior.
 
-- **Ideal _ Continuous Wave Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-54-4-869), [(Article)](./citation/5_Ideal_Continuous-Wave_Gaussian.pdf), [(Code)](./src/5_Ideal_Continuous-Wave_Gaussian.f90)    
+- **Ideal _ Continuous Wave Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-54-4-869), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/5_Ideal_Continuous-Wave_Gaussian.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/5_Ideal_Continuous-Wave_Gaussian.f90)    
 This study explored SHG efficiency under Continuous Wave Gaussian conditions, highlighting how temperature fluctuations can prevent achieving ideal conversion efficiency. The study found that even minor temperature increases could drastically reduce SHG efficiency due to beam depletion and refractive index changes, highlighting the importance of temperature control in optimizing SHG processes.
  
-- **Ideal _ Pulsed Wave Bessel Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-53-32-7691), [(Article)](./citation/6_Ideal_Pulsed-Wave_Bessel-Gaussian.pdf), [(Code)](./src/6_Ideal_Pulsed-Wave_Bessel-Gaussian.f90)    
+- **Ideal _ Pulsed Wave Bessel Gaussian** [(Journal)](https://opg.optica.org/ao/abstract.cfm?uri=ao-53-32-7691), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/6_Ideal_Pulsed-Wave_Bessel-Gaussian.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/6_Ideal_Pulsed-Wave_Bessel-Gaussian.f90)    
 This research introduced a model using Pulsed Bessel-Gauss beams, challenging traditional assumptions like the nondepleted wave approximation. This study provided a more accurate framework for SHG by considering wave depletion effects, demonstrating the impact of beam profile on heat and SHG efficiency under pulsed conditions.
 
 
@@ -449,7 +449,7 @@ Note: The equations, represented in different colors for $\textcolor{orange}{T}$
 </table>
 
 
-- **Coupled _ Continuous Wave Gaussian** [(Journal)](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-21-25615&id=302163), [(Article)](./citation/7_Coupled_Continuous-Wave_Gaussian.pdf), [(Code)](./src/7_Coupled_Continuous-Wave_Gaussian.f90)     
+- **Coupled _ Continuous Wave Gaussian** [(Journal)](https://opg.optica.org/oe/fulltext.cfm?uri=oe-22-21-25615&id=302163), [(Article)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/citation/7_Coupled_Continuous-Wave_Gaussian.pdf), [(Code)](https://github.com/Second-Harmonic-Generation/SHG-Documentation/blob/main/src/7_Coupled_Continuous-Wave_Gaussian.f90)     
 This study advanced our understanding by incorporating both Thermally Induced Phase Mismatching (TIPM) and thermal lensing into SHG models using a Continuous Wave Gaussian source. By coupling eight different equations, the model captured the dynamic interactions between heat and SHG efficiency over time. This comprehensive approach provided a realistic simulation that closely matched experimental results, significantly enhancing our understanding of thermal effects in Continuous Wave Gaussian SHG systems.
 
 
@@ -516,12 +516,12 @@ The key distinction between different wave types and crystal materials lies in t
 
 Moreover, while our studies primarily focused on developing detailed models to understand these thermal behaviors, future research can take the next step by conducting comprehensive simulations and experimental validations. These simulations can provide deeper insights into how different thermal properties, such as anisotropic conductivity and varying boundary conditions, influence heat distribution and phase mismatching across various laser and crystal configurations. Such explorations would not only enhance the theoretical understanding but also offer practical guidelines for optimizing SHG systems under varying thermal conditions.
 
-Ultimately, exploring these new avenues will open up entirely new research trajectories, each with its own set of challenges and opportunities. This will enable a more complete understanding of thermal effects in nonlinear optical systems, contributing to the design of more efficient and adaptable laser technologies. To facilitate further research, other researchers can use our GitHub repository as a tutorial, utilizing the provided source code as a foundation for conducting simulations and extending the study in this field. By building on our work, future studies can deepen insights into heat transfer dynamics and refine thermal management strategies across various nonlinear optical configurations.
+Ultimately, exploring these new avenues will open up entirely new research trajectories, each with its own set of challenges and opportunities. This will enable a more complete understanding of thermal effects in nonlinear optical systems, contributing to the design of more efficient and adaptable laser technologies. To facilitate further research, other researchers can use our [**SHG-Documentation repository**](https://github.com/Second-Harmonic-Generation/SHG-Documentation) as a tutorial, utilizing the provided source code as a foundation for conducting simulations and extending the study in this field. By building on our work, future studies can deepen insights into heat transfer dynamics and refine thermal management strategies across various nonlinear optical configurations.
 
 We are currently working on these topics and are dedicated to pushing this research forward. In the near future, we will share the results of our ongoing studies along with new articles and code updates in this repository. Our goal is to expand thes repository into a more comprehensive resource that will support other researchers in exploring the complexities of thermal effects in nonlinear optics. Stay tuned for these updates, as they will provide even deeper insights and tools to enhance future research in this field.
 
 # 12. How to Cite Us
-For proper citation of our work, please visit the [**citation**](./citation) directory in this repository. This folder contains all necessary citation files and clear instructions to ensure correct referencing and acknowledgment of our research.
+For proper citation of our work, please visit the [**citation**](https://github.com/Second-Harmonic-Generation/SHG-Documentation/tree/main/citation) directory in this repository. This folder contains all necessary citation files and clear instructions to ensure correct referencing and acknowledgment of our research.
 
 
 # 13. For Additional Questions
