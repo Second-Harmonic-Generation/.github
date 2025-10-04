@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./images/readme_images/SHG-banner.png" alt="SHG-banner" >
+  <img src="../images/readme_images/SHG-banner.png" alt="SHG-banner" >
 </p>
 
 
@@ -177,7 +177,7 @@ Folder PATH listing
 SHG employs a nonlinear crystal like Potassium Titanyl Phosphate (KTP) to convert red laser (1064 nm) into green laser (532 nm). This conversion is essential because of green light's necessity and difficulty in direct production. During the SHG process, a powerful laser beam interacts with the crystal, causing it to emit light at exactly half the wavelength of the incoming beam, effectively doubling the light's frequency. 
 
 <p align="center">
-  <img src="./images/readme_images/image01.png" alt="Image 1">
+  <img src="../images/readme_images/image01.png" alt="Image 1">
 </p>
 
 <p align="center"> <strong>Figure 1.</strong> During SHG, a nonlinear crystal like KTP converts a 1064 nm red laser (Fundamental Wave) into 532 nm green laser (Second Harmonic Wave), effectively doubling the frequency of the original beam through a nonlinear optical process.</p>
@@ -188,7 +188,7 @@ As the SHG process occurs, some of the input energy is not perfectly converted i
 To address this issue, the crystal is equipped with a cooling system depicted in the Figure 2. A coolant circulates around the crystal, absorbing the heat thereby maintaining an optimal temperature for a more efficient SHG. The crystal's lateral surface is maintained at a constant temperature through cooling. Typically, a double layer of copper covers these surfaces, with either water or liquid nitrogen passing through it. This ensures a constant temperature condition at the crystal's side surface. Additionally, the input and output surfaces of the crystal are cooled through both radiation and convection. Heat reaches these surfaces through conduction and is then transferred away by convection and radiation processes.
 
 <p align="center">
-  <img src="./images/readme_images/image02.png" alt="Image 2" >
+  <img src="../images/readme_images/image02.png" alt="Image 2" >
 </p>
 
 <p align="center"> <strong>Figure 2.</strong> A cooling system uses a double layer of copper and circulating coolant (water or liquid nitrogen) to manage heat dissipation, keeping the crystal at an optimal temperature for efficient laser performance during SHG.</p>
@@ -199,7 +199,7 @@ The thermal gradient within a crystal subjected to laser radiation is shown in F
 
 
 <p align="center">
-  <img src="./images/readme_images/image03.png" alt="Image 3">
+  <img src="../images/readme_images/image03.png" alt="Image 3">
 </p>
 
 <p align="center"> <strong>Figure 3.</strong> Visualization of the thermal gradient in a crystal exposed to laser radiation. The hottest point is at the center where the laser is focused, with temperature decreasing outward toward the edges. The left side, where the laser first hits, is the hottest, with the temperature gradually cooling as it moves to the right.</p>
@@ -222,7 +222,7 @@ To achieve optimal performance, understanding the heat conduction within a cryst
 To efficiently analyze Second Harmonic Generation (SHG) in a KTP crystal modeled as a cylinder, we can reduce the workload by taking advantage of the crystal’s symmetry. Instead of examining the entire cylindrical shape, we focus on a simpler two-dimensional half-plane, a rectangular section that represents one side of the cylinder. This works because of the crystal’s symmetry along its lateral axis; studying this smaller section captures the behavior of the full cylinder. By visualizing this half-plane rotating around the horizontal axis, we effectively account for the whole cylindrical structure. This approach significantly reduces the size of the problem, decreasing the number of calculations needed. It allows for high-resolution analysis with greater efficiency, maintaining the accuracy of the SHG study while saving substantial time and resources.
 
 <p align="center">
-  <img src="./images/readme_images/image04.png" alt="Image 4" width="45%">
+  <img src="../images/readme_images/image04.png" alt="Image 4" width="45%">
 </p>
 
 <p align="center"> <strong>Figure 4.</strong> Efficient SHG Analysis in KTP Crystals Using Symmetry: The image shows how a two-dimensional half-plane leverages the crystal’s symmetry to represent the entire cylinder, reducing computational complexity while maintaining accurate SHG analysis. 
@@ -233,7 +233,7 @@ To efficiently analyze Second Harmonic Generation (SHG) in a KTP crystal modeled
 In the KTP crystal, the input and output faces undergo convective and radiative cooling, allowing heat to dissipate efficiently from these surfaces. Since the lateral surfaces are in contact with a cooling system, only conductive heat transfer occurs at these boundaries, maintaining a constant temperature. As a result, there are no mathematical complexities associated with lateral surface boundary conditions. Heat transfer within crystal occurs exclusively through conduction, since it is a solid. Additionally, we need to carefully determine the boundary conditions of the crystal's axis for accurate modeling.
 
 <p align="center">
-  <img src="./images/readme_images/image05.png" alt="Image 5" width="85%">
+  <img src="../images/readme_images/image05.png" alt="Image 5" width="85%">
 </p>
 
 <p align="center"> <strong>Figure 5.</strong> Heat dissipation in KTP crystal during SHG, with convective and radiative cooling at the faces and constant temperature maintained at the lateral surfaces.
@@ -242,7 +242,7 @@ In the KTP crystal, the input and output faces undergo convective and radiative 
 Just as a ball rolls downhill due to the force of gravity, heat flows from a hotter region to a colder one due to the temperature gradient. The temperature difference drives this heat transfer, similar to how gravity drives the motion of the ball (Figure 6).
 
 <p align="center">
-  <img src="./images/readme_images/image06.png" alt="Image 6" width="75%">
+  <img src="../images/readme_images/image06.png" alt="Image 6" width="75%">
 </p>
 
 <p align="center"> <strong>Figure 6.</strong> Just like a ball that only rolls downhill and not uphill due to gravity, heat flows from the hottest regions to the cooler ones, illustrating the natural direction of heat transfer within the crystal.
@@ -251,7 +251,7 @@ Just as a ball rolls downhill due to the force of gravity, heat flows from a hot
 The crystal axis represents the hottest region, and no heat flows across it, meaning there is no conduction, convection, or radiation in this direction. Due to the temperature gradient, heat is transferred solely outward from the axis toward the cooler lateral surfaces.
 
 <p align="center">
-  <img src="./images/readme_images/image07.png" alt="Image 7" width="30%">
+  <img src="../images/readme_images/image07.png" alt="Image 7" width="30%">
 </p>
 
 <p align="center"> <strong>Figure 7.</strong> Heat only flows radially outward from the hottest crystal axis to the cooler lateral surfaces, with no heat transfer across the axis.
@@ -261,7 +261,7 @@ The crystal axis represents the hottest region, and no heat flows across it, mea
 In conclusion, the boundary condition for the crystal axis is insulation, as no heat transfer occurs across it. With this, all boundary conditions for the crystal are defined: insulation for the axis, constant temperature at the lateral surfaces, and convection and radiation at the faces. These boundary conditions are essential for accurately modeling the heat distribution and optimizing SHG performance.
 
 <p align="center">
-  <img src="./images/readme_images/image08.png" alt="Image 8" width="85%">
+  <img src="../images/readme_images/image08.png" alt="Image 8" width="85%">
 </p>
 
 <p align="center"> <strong>Figure 8.</strong> 
@@ -305,7 +305,7 @@ This study developed a numerical model for heat distribution under Pulsed Gaussi
 During SHG, a crystal is subjected to laser radiation, the temperature at various points within the crystal becomes spatially and temporally dependent. This variation in temperature causes corresponding changes in the crystal's refractive index, making the refractive index also a function of position and time. Since the speed of light in a medium is dependent on its refractive index, the speed of light traveling through different regions of the crystal will similarly be a function of position and time. Specifically, the temperature gradient within the crystal causes the speed of light to vary radially. Consequently, different regions of the wavefront experience different speeds, leading to distortions in the wavefront shape. This results in a phase mismatch between the fundamental and second harmonic waves. In different crystals, the wavefronts may be convex or concave. Figure 9. shows a concave wavefront.
 
 <p align="center">
-  <img src="./images/readme_images/image09.png" alt="Image 9" width="75%">
+  <img src="../images/readme_images/image09.png" alt="Image 9" width="75%">
 </p>
 
 <p align="center"> <strong>Figure 9.</strong> Schematic of the phase mismatch due to temprature gradient within the crystal. In different crystals the wavefronts may be convex or concave. This figure shows a concave wavefront.</p>
@@ -345,7 +345,7 @@ This work addresses the issue of Thermally Induced Phase Mismatching (TIPM) in K
 In ideal conditions where there is no heat dissipation or phase mismatch, all of the fundamental wave is perfectly converted into the Second Harmonic Wave, demonstrating the maximum possible efficiency in nonlinear crystals. 
 
 <p align="center">
-  <img src="./images/readme_images/image01.png" alt="Image 1">
+  <img src="../images/readme_images/image01.png" alt="Image 1">
 </p>
 
 <p align="center"> <strong>Figure 1.</strong> Maximum SHG Efficiency: Achieving full conversion of the Fundamental Wave (FW) to the Second Harmonic Wave (SHW) under ideal thermal and phase conditions.
